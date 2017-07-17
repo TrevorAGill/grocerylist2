@@ -1,0 +1,20 @@
+#show-list {
+  display: none;
+}
+
+.click-me {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.click-me:hover {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+li {
+  list-style: none;
+}

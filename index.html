@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Grocery List</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add an Item:</h2>
+          <form id="new-list">
+            <div class="form-group">
+              <label for="new-list-item">Item</label>
+              <input type="text" class="form-control" id="new-list-item">
+            </div>
+            <div class="form-group">
+              <label for="new-list-count">Count</label>
+              <input type="number" class="form-control" id="new-list-count">
+            </div>
+            <div class="form-group">
+              <label for="new-list-price">Price</label>
+              <input type="number" class="form-control" id="new-list-price">
+            </div>
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Grocery List:</h2>
+          <div class="listItem">
+
+          </div>
+          <form id="list-edit">
+            <div class="list-edit-div">
+              <!-- <button type="submit" class="btn btn-primary">Cross-out</button> -->
+              <button type="submit" class="btn btn-primary">Remove from List</button>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="col-md-6">
+          <div id="show-list">
+            <h2></h2>
+
+            <p>Count: <span class="count"></span></p>
+            <p>Price: <span class="price"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
