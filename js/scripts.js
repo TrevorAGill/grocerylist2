@@ -1,4 +1,5 @@
-var array = [];
+var emptyArray = [];
+var priceArray = [];
 
 //Business Logic
 
@@ -18,8 +19,11 @@ $(document).ready(function() {
     var inputtedListItem = $("input#new-list-item").val();
     var inputtedListCount = $("input#new-list-count").val();
     var inputtedListPrice = $("input#new-list-price").val();
+    alert(inputtedListPrice);
+    var priceArray = emptyArray.push(inputtedListPrice);
 
-
+    alert(priceArray);
+    console.log(priceArray);
     var newListItem = new ListItem(inputtedListItem, inputtedListCount, inputtedListPrice);
 
     $(".listItem").append("<li><input type='checkbox' class='listItem' name='grocery-thing' value='" + newListItem.item + "'>" + " " + "<span class='click-me'>" + newListItem.item + "</span></li>");
@@ -32,8 +36,10 @@ $(document).ready(function() {
     $("#show-list h2").text(newListItem.item);
     $(".count").text(newListItem.count);
     $(".price").text(newListItem.price);
+    debugger;
     });
   });
+
 
 
 
@@ -45,6 +51,7 @@ $(document).ready(function() {
 
     $("input:checkbox[name=grocery-thing]:checked").each(function(){
       var listEditSelection = $(this).val();
+
 
 
 
